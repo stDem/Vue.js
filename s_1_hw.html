@@ -20,7 +20,7 @@
   <body>
     <div id="app">
       <!-- 1. Создать кнопку "Перевернуть". При клике на кнопку текст кнопки должен перевернуться и отобразиться в обратном порядке. -->
-      <button v-on:click="isActive=!isActive" v-bind:class="{active: isActive}">
+      <button @click="isActive=!isActive" :class="{active: isActive}">
         {{ rotateBtn }}</button
       ><br />
 
@@ -39,15 +39,13 @@
     </div>
     <script>
       const App = {
-        data() {
-          return {
-            rotateBtn: "Rotate",
-            isActive: false,
-            countList: 0,
-            textList: "New item",
-            notes: [],
-          };
-        },
+        data: () => ({
+          rotateBtn: "Rotate",
+          isActive: false,
+          countList: 0,
+          textList: "New item",
+          notes: [],
+        }),
 
         methods: {
           addNewNote() {
