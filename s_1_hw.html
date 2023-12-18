@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="/css/s_1_hw.css" /> -->
+    <script src="https://unpkg.com/vue@next"></script>
+
+    <title>Homework_1</title>
+    <style>
+      .active {
+        transform: scale(1, -1);
+      }
+      .listLi {
+        list-style-type: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <!-- 1. Создать кнопку "Перевернуть". При клике на кнопку текст кнопки должен перевернуться и отобразиться в обратном порядке. -->
+      <button v-on:click="isActive=!isActive" v-bind:class="{active: isActive}">
+        {{ rotateBtn }}</button
+      ><br />
+
+      <!-- 2. Есть список элементов. Пользователь может добавлять новые элементы списка с текстом “Новый элемент списка” нажав на кнопку "Добавить". -->
+      <h1>Add new item:</h1>
+      <button class="addList" @click="addNewNote">Add</button>
+      <!-- <button class="deleteList" @click="deleteLastNote">delete</button> -->
+
+      <ul class="list">
+        <li class="listLi" v-for="(note, index) in notes">
+          {{ index +1 }}. {{ note }}
+          <!-- 3. *При клике на элемент списка он должен быть удален. -->
+          <button class="deleteBtn" @click="removeNote(index)">delete</button>
+        </li>
+      </ul>
+    </div>
+    <script>
+      const App = {
+        data() {
+          return {
+            rotateBtn: "Rotate",
+            isActive: false,
+            countList: 0,
+            textList: "New item",
+            notes: [],
+          };
+        },
+
+        methods: {
+          addNewNote() {
+            this.countList++;
+            this.notes.push(this.textList + " " + this.countList);
+          },
+          // deleteLastNote() {
+          //   this.notes.pop();
+          // },
+          removeNote(index) {
+            this.notes.splice(index, 1);
+          },
+        },
+      };
+
+      Vue.createApp(App).mount("#app");
+    </script>
+  </body>
+</html>
