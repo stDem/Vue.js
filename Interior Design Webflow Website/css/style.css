@@ -1,0 +1,154 @@
+.messengers, .header__logo-right ul {
+  display: flex;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding-left: calc(50% - 500px);
+  padding-right: calc(50% - 500px);
+}
+
+.interno-logo {
+  color: #292f36;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.interno-logo h1 {
+  color: #292f36;
+  font-family: "DM Serif Display";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.header__logo-left a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #292f36;
+}
+.header__logo-right {
+  display: flex;
+  align-items: center;
+}
+.header__logo-right ul {
+  gap: 20%;
+}
+.header__logo-right ul li {
+  list-style-type: none;
+}
+.header__logo-right ul li a {
+  text-decoration: none;
+  color: #292f36;
+}
+
+.banner {
+  background: url("/img/banner.png"), lightgray 50%/cover no-repeat;
+  width: 100%;
+  height: 30vh;
+  background-size: cover;
+}
+
+.p-footer {
+  color: #4d5053;
+  font-family: Jost;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.p-footer_a {
+  text-decoration: none;
+}
+
+.messengers {
+  gap: 15%;
+  padding-top: 31px;
+}
+
+.h1-footer {
+  color: #292f36;
+  font-family: "DM Serif Display";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+}
+
+.footer {
+  display: flex;
+  gap: 10%;
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+.footer__one {
+  max-width: 393px;
+}
+.footer__two__text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.footer__three__text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.blog-btn {
+  color: #292f36;
+  text-align: center;
+  font-family: Jost;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  display: flex;
+  padding: 9px 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: #f4f0ec;
+  border: none;
+}
+
+.blog-btn:hover {
+  background-color: #292f36;
+  color: #fff;
+}
+
+.blog {
+  display: flex;
+  gap: 50px;
+}
+.blog__content {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 650px;
+}
+.blog__tags h1 {
+  color: #292f36;
+  font-family: "DM Serif Display";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+}
+.blog__tags__btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}/*# sourceMappingURL=style.css.map */
