@@ -56,7 +56,9 @@ const Blog = {
   },
   methods: {
     sort(tag) {
-      this.articles.sort((tag, b) => tag === b.tag);
+      this.articles.filter((tag) => {
+        tag === this.articles.tag;
+      });
     },
   },
 
@@ -68,7 +70,7 @@ const Blog = {
       <div class="blog__content__cont" v-for="article in articles"
       :key="article.id">
       <h1>{{article.title}}</h1>
-      <img src="{{article.img}}" alt="Kitchen design" />
+      <img src="{{article.img}}" alt="{{article.tag}} design" />
       <p>{{article.text}}</p>
     </div>
     </div>
@@ -76,12 +78,12 @@ const Blog = {
     <div class="blog__tags">
       <h1>Tags</h1>
       <div class="blog__tags__btns">
-        <button class="blog-btn" @click="sort("Kitchen")">Kitchen</button>
-        <button class="blog-btn" @click="sort("Bedroom")">Bedroom</button>
-        <button class="blog-btn" @click="sort("Building")">Building</button>
-        <button class="blog-btn" @click="sort("Architecture")">Architecture</button>
-        <button class="blog-btn" @click="sort("Kitchen-planning")">Kitchen planning</button>
-        <button class="blog-btn" @click="sort("Bathroom")">Bathroom</button>
+        <button class="blog-btn" @click="sort('Kitchen')">Kitchen</button>
+        <button class="blog-btn" @click="sort('Bedroom')">Bedroom</button>
+        <button class="blog-btn" @click="sort('Building')">Building</button>
+        <button class="blog-btn" @click="sort('Architecture')">Architecture</button>
+        <button class="blog-btn" @click="sort('Kitchen-planning')">Kitchen planning</button>
+        <button class="blog-btn" @click="sort('Bathroom')">Bathroom</button>
       </div>
     </div>
   </section>
